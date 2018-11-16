@@ -1,0 +1,21 @@
+<nav>
+    <ul>
+        <li class="logo">
+            <a href="/">
+                <div class=""><img src="/public/images/logo.png" alt="句悦词汇网"></div>
+                <div><span>句悦词汇</span></div>
+            </a>
+        </li>
+        <% categories.forEach(function (category) { %>
+        <li class="item">
+            <a href="/words/<%-category.number%>.html">
+                <%-category.name%>
+            </a>
+        </li>
+        <% }) %>
+    </ul>
+
+    <div class="icp">
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16025085号-7</a>
+    </div>
+</nav>
