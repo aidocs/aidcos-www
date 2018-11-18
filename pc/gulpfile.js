@@ -9,7 +9,7 @@ const autoprefixer = require('gulp-autoprefixer'); //给 CSS 增加前缀。解�
 
 gulp.task('buildCSS', function () {
     var timestamp = +new Date();
-    var flg = gulp.src('app/public/src/less/**/main.less') //该任务针对的文件
+    var flg = gulp.src('app/public/src/less/*') //该任务针对的文件
         .pipe(less()) //编译less
         .pipe(autoprefixer({
             browsers: ['last 2 versions','Safari >0', 'Explorer >0', 'Edge >0', 'Opera >0', 'Firefox >=20'],//last 2 versions- 主流浏览器的最新两个版本
@@ -18,7 +18,7 @@ gulp.task('buildCSS', function () {
             //        transform: rotate(45deg);
             remove:true //是否去掉不必要的前缀 默认：true 
         }))
-        .pipe(concat('main.css')) //合并css
+        //.pipe(concat('main.css')) //合并css
         .pipe(cssmin()) //压缩css
         .pipe(rename({suffix:'.min'})) //设置压缩文件名
         .pipe(gulp.dest('app/public/dist/css')) //输出文件的存放地址

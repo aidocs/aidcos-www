@@ -1,13 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<% include ../common/head.html %>
-<body>
-    <div>
-        <% include ../common/nav.html %>
-        <main class="clearfix">
 
-        </main>
-        <% include ../common/footer.html %>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aidocs - 学习人工智能数据科学_了解交流最新人工智能资讯_从Aidocs开始</title>
+    <meta name="keywords" content="aidocs,aidocs在线教程,技术文档,人工智能入门教程,TensorFlow,NumPy,scikit-learn,Matplotlib,Keras,PyTorch,Pandas,Julia,Mxnet,theano,caffe2" />
+    <meta name="description" content="aidocs是一个专业的人工智能编程语言入门学习及技术文档查询网站，提供包括TensorFlow,NumPy,scikit-learn,Matplotlib,Keras,PyTorch,Pandas,Julia,Mxnet,theano,caffe2等框架和编程语言和开源技术的在线教程及使用手册，学习人工智能数据科学，了解交流最新人工智能资讯，从Aidocs开始。" />
+    <link rel="stylesheet" href="/public/dist/css/common.min.css">
+    <link rel="stylesheet" href="/public/dist/css/index.min.css">
+    <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <% include ../common/nav.html %>
+
+    <div class="main">
+        <header>
+            <div class="logo-warp">
+                AIDOCS.cn
+            </div>
+            <div class="search-warp">
+                <div class="search-com">
+                    <i class="search-icon"></i>
+                    <input type="text" placeholder="请输入你要查找的文档名称" />
+                    <button>搜索文档名称</button>
+                </div>
+            </div>
+            <div class="recommended">
+                <div class="text">常用：</div>
+                <div class="list">
+                    <ul>
+                        <li><a href="https://www.numpy.org.cn">NumPy中文文档</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <ul>
+                <% site.docsArray.forEach(function (item, index) { %>
+                <li>
+                    <div class="window">
+                        <div class="menu">
+                            <div class="action-bar fix">
+                                <div>
+                                </div>
+                                <div>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="window-title">
+                                <%-item.displayTitle%>
+                            </div>
+                        </div>
+                        <div class="body">
+                            <div class="logo">
+                                <a target="_blank" href="<%-item.docsLink%>">
+                                    <img src="<%-item.docsIcon%>" alt="<%-item.docsTitle%>" />
+                                </a>
+                            </div>
+                            <div class="content" title="<%-item.docsDesc%>">
+                                <%-item.docsDesc%>
+                            </div>
+                            <div class="author">by: <a href="<%-item.authorLink%>" target="_blank"><%-item.authorName%></a></div>
+                        </div>
+                    </div>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
     </div>
+    
+    <% include ../common/footer.html %>
+
+    <script src="/public/libs/jquery.min.js"></script>
+    <script src="/public/dist/js/index.min.js"></script>
 </body>
+
 </html>

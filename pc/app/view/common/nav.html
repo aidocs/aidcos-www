@@ -1,21 +1,12 @@
-<nav>
-    <ul>
-        <li class="logo">
-            <a href="/">
-                <div class=""><img src="/public/images/logo.png" alt="句悦词汇网"></div>
-                <div><span>句悦词汇</span></div>
-            </a>
-        </li>
-        <% categories.forEach(function (category) { %>
-        <li class="item">
-            <a href="/words/<%-category.number%>.html">
-                <%-category.name%>
-            </a>
-        </li>
-        <% }) %>
-    </ul>
-
-    <div class="icp">
-        <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备16025085号-7</a>
-    </div>
-</nav>
+    <nav>
+        <ul>
+            <div class="layout-left">
+                <% site.topNav.forEach(function (item, index) { %>
+                <li <% if ( pageType === item.pageType ) { %>class="active"<% } %> ><a href="<% if ( !item.url ) { %>javascript:alert('暂未开放')<% } else { %><%-item.url%><% } %>" ><i class="icon icon-<%-item.iconName%>"></i><%-item.name%></a></li>
+                <% }) %>
+            </div>
+            <div class="layout-right">
+                <li><button class="btn-top-login">登陆</button></li>
+            </div>
+        </ul>
+    </nav>

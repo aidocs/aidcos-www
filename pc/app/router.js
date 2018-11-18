@@ -14,8 +14,9 @@ module.exports = app => {
     router.redirect('/index.php', '/index.html', 302);
     router.redirect('/index.asp', '/index.html', 302);
 
-    router.get('/', controller.home.index); //首页
-    router.get('/index.html', controller.home.index); //首页
-    
+    router.get('/', controller.page.index); //首页
+    router.get('/index.html', controller.page.index); //首页
+    router.get('/information.html', controller.page.information); //信息聚合
+    router.get('/partner.html', controller.page.partner); //或者伙伴
     //api
 };

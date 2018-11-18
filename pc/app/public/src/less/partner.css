@@ -1,0 +1,82 @@
+.main {
+    padding-bottom: 40px;
+}
+
+.main .container {
+    width: 1180px;
+    background-color: #fff;
+    margin: 0px auto;
+    padding-top: 50px;
+    border-radius: 6px
+}
+
+.main .container .logo-list ul::after {
+    display:block; 
+    content:"";
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+h1.title {
+    font-size: 30px;
+    line-height: 42px;
+    font-weight: 400;
+    text-align: center;
+    color: #222;
+}
+
+.partner-item {
+    float: left;
+    width: 236px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.partner-item img {
+    height: 90px;
+}
+
+.partner-link {
+    display: block;
+    height: 120px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    -webkit-transition: -webkit-transform .2s;
+    -moz-transition: -moz-transform .2s;
+    transition: transform .2s;
+}
+
+.partner-link:hover {
+    transform: translateY(-6px);
+}
+
+.partner-name {
+    color: #999;
+    font-size: 14px;
+}
+
+.apply-warp {
+    text-align: center;
+    padding: 40px;
+}
+
+.apply-warp button {
+    border: none;
+    background-color: #fff;
+    border: 1px solid #F64F4F;
+    font-size: 15px;
+    color: #F64F4F;
+    height: 40px;
+    width: 130px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.apply-warp button:hover {
+    background-color: #F64F4F;
+    color: #fff;
+}

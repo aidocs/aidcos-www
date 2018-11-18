@@ -49,9 +49,9 @@
     "node": ">=8.9.0"
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-aidocs-www --port=7004",
-    "stop": "egg-scripts stop --title=egg-server-aidocs-www --port=7004",
-    "dev": "egg-bin dev --port=7004",
+    "start": "egg-scripts start --daemon --title=egg-server-aidocs-www --port=7021",
+    "stop": "egg-scripts stop --title=egg-server-aidocs-www --port=7021",
+    "dev": "egg-bin dev --port=7021",
     "debug": "egg-bin debug",
     "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "egg-bin test",

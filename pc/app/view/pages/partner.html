@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>合作伙伴 - Aidocs</title>
+    <meta name="keywords" content="aidocs合作伙伴,aidocs友情链接" />
+    <meta name="description" content="aidocs合作伙伴,aidocs友情链接" />
+    <link rel="stylesheet" href="/public/dist/css/common.min.css">
+    <link rel="stylesheet" href="/public/dist/css/partner.min.css">
+    <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    
+    <% include ../common/nav.html %>
+
+    <div class="main">
+        <div class="container">
+            <h1 class="title">
+                AIDOCS.cn 合作伙伴
+            </h1>
+            <div class="logo-list">
+                <ul>
+                    <% site.partnerArray.forEach(function (item, index) { %>
+                    <li class="partner-item fl">
+                        <a href="<%-item.link%>" target="_blank" class="partner-link">
+                            <img src="<%-item.logo%>" alt="<%-item.name%>">
+                            <div><span class="partner-name"><%-item.name%></span></div>
+                        </a>
+                    </li>
+                    <% }) %>
+                </ul>
+            </div>
+
+            <div class="apply-warp">
+                <button class="btn-apply" onclick="alert('邮箱：l@nmpy.org.cn')">申请友情链接</button>
+            </div>
+        </div>
+    </div>
+
+    <% include ../common/footer.html %>
+
+</body>
+
+</html>

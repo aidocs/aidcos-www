@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>信息聚合 - Aidocs</title>
+    <meta name="keywords" content="aidocs信息聚合" />
+    <meta name="description" content="aidocs信息聚合平台,所有内容均来自我们的信息合作方。" />
+    <link rel="stylesheet" href="/public/dist/css/common.min.css">
+    <link rel="stylesheet" href="/public/dist/css/information.min.css">
+    <link rel="icon" href="/public/images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/public/images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    
+    <% include ../common/nav.html %>
+
+    <div class="main">
+        <div class="container">
+            <div class="banner" style="background-image: url('/public/images/theme-1-b448ca94f764cedf5cef32fe077df33c.jpg');">
+                <div class="banner-warp">
+                    <div class="infomation-inner">
+                        <div class="avatar">
+                            <img src="/public/images/58d0f028b9fe3.png" alt="机器之心">
+                        </div>
+                        <div class="info">
+                            <div class="name">
+                                <h1>{{selectedMenu.name}}</h1>
+                            </div>
+                            <div class="intro">
+                                <p>这个家伙很懒，什么也没有留下</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-menu">
+                <div class="infomation-inner">
+                    <ul>
+                        <li :key="index" v-for="(menu, index) in infoMenu" @click="selectMenu(menu)" :class="{'active': menu.isSelected}">{{menu.name}}</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content box-shadow">
+                <div class="title">
+                    <h2>最新文章资讯</h2>
+                </div>
+                <div class="art-list">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <% include ../common/footer.html %>
+
+    <script src="/public/libs/vue.min.js"></script>
+    <script src="/public/dist/js/information.min.js"></script>
+</body>
+
+</html>

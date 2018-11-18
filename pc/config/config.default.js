@@ -29,13 +29,13 @@ module.exports = appInfo => {
     ];
 
     //404 page
-    config.notfound = {
-        pageUrl: '/view/404.html',
-    };
+    // config.notfound = {
+    //     pageUrl: '/view/404.html',
+    // };
 
     //站点信息
     config.Site = function () {
-        return {}
+        return require('./site')
     }
 
     return config;
