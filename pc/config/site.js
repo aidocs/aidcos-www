@@ -45,12 +45,12 @@ module.exports = {
 
     //文档列表
     docsArray: [{
-        displayTitle: "TensorFlow（旧）",
+        displayTitle: "TensorFlow",
         docsTitle: "TensorFlow中文文档",
         docsDesc: "TensorFlow™ 是一个采用数据流图（data flow graphs），用于数值计算的开源软件库。节点（Nodes）在图中表示数学操作，图中的线（edges）则表示在节点间相互联系的多维数据数组，即张量（tensor）。",
-        docsLink: "http://www.tensorfly.cn/tfdoc/api_docs/index.html",
+        docsLink: "https://tensorflow.google.cn/tutorials/?hl=zh-cn",
         docsIcon: "/public/images/TensorFlow.png",
-        authorName: "Tensorfly",
+        authorName: "TensorFlow官方",
         authorLink: "http://www.tensorfly.cn/"
     }, {
         displayTitle: "NumPy",
